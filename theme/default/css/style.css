@@ -1,0 +1,82 @@
+body {
+    font-family: "Hiragino Sans GB W3", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", "Sans";
+}
+
+button {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border: none;
+    padding: .375rem .75rem;
+    font-size: 16px;
+    line-height: 1.5;
+    border-radius: .4rem;
+    transition: 0.4s ease background-color;
+}
+
+a, a:hover {
+    text-decoration: none;
+    transition: 0.4s ease all;
+}
+
+a:hover {
+    color: skyblue;
+}
+
+.center-aligned {
+    display: block;
+    margin: auto auto;
+}
+
+.header {
+    padding-top: 60px;
+    padding-left: 10px;
+    height: 96px;
+}
+
+.logo {
+    float: left;
+}
+
+.search {
+    margin: auto auto;
+    width: 450px;
+}
+
+#search_input {
+    width: 75%;
+}
+
+#search_button {
+    background-color: #1fe0d3;
+    color: white;
+}
+
+#search_button:hover {
+    background-color: #0c9e8f
+}
+
+.navigator ul {
+    list-style-type: none;
+}
+
+.navigator li {
+    background-color: #19a2e2;
+    padding: 0.4em 2em;
+    text-align: center;
+    line-height: 2;
+    font-size: 16px;
+    font-weight: 400; 
+    float: left;
+    width: 25%;
+}
+
+.navigator a {
+    color: white;
+}
+
+.navigator a:hover {
+    color: #e7b466;
+}
