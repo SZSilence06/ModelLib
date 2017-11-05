@@ -1,6 +1,4 @@
 <?php
-    require_once 'config.php';
-
     function ML_loadTheme() {
         $theme_dir = "theme/".THEME;
         require_once("$theme_dir/post_model.php");

@@ -8,6 +8,10 @@
         
     }
 
+    class DownloadException extends Exception {
+        
+    }
+
     class ModelExistingException extends Exception {
         
     }
@@ -31,5 +35,14 @@
 
     class ReadFileException extends FileException {
         
+    }
+
+    class ParamException extends Exception {
+        public function __construct($paramName, $paramValue) {
+            parent::__construct('Invalid Paramter: $paramName = $paramValue');
+        }
+    }
+
+    class InvalidRequestException extends Exception {
     }
 ?>

@@ -12,6 +12,7 @@
         public function renderCell($model) { ?>
         <li>
             <div class="model_cell">
+                <div class="model_cell_overlay"></div>
                 <div class="model_avatar">
                     <img src="<?php echo $model->getAvatar();?>" alt="">
                 </div>
@@ -22,7 +23,9 @@
                     <p class="model_size">
                         <?php echo $model->getSize() ?>
                     </p>
+                    <a class="btn_download" href="action.php?method=download&id=<?php echo $model->getId();?>"></a>
                 </div>
+                
             </div>
         </li>
        
@@ -46,8 +49,8 @@
     }
 ?>
 
-<div>
-    <ul class="model_list">
+<div class="model_list">
+    <ul>
         <?php
             outputModelList();
         ?>

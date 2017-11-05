@@ -8,6 +8,7 @@
         private $modelDir_ = "/home/zju/sites/ModelLib/data/model/";
         private $connection_;
         private $table_ = "Model";
+        private $colId_ = "ID";
         private $colName_ = "name";
         private $colLocation_ = "location";
         private $colHash_ = "hash";
@@ -15,6 +16,7 @@
         private $stmAddModel_;
         private $stmQueryExisting_;
         private $stmGetModels_;
+        private $stmGetModelById_;
 
         private  function connect()
         {
@@ -37,6 +39,9 @@
 
             $sql = "SELECT * FROM $this->table_;";
             $this->stmGetModels_ = $this->connection_->prepare($sql);
+
+            $sql = "SELECT * FROM $this->table_ WHERE $this->colId_ = :id;";
+            $this->stmGetModelById_ = $this->connection_->prepare($sql);
         }
 
         private function __construct()
@@ -76,11 +81,25 @@
             $models = array();
             foreach($this->stmGetModels_ as $row) {
                 $model = new Model();
+                $model->setId($row[$this->colId_]);
                 $model->setName($row[$this->colName_]);
                 $model->setFile($row[$this->colLocation_]);
                 array_push($models, $model);
             }
             return $models;
+        }
+
+        public function getModelById($id) {
+            $this->stmGetModelById_->execute(array(":id" => $id));
+            $row = $this->stmGetModelById_->fetch(PDO::FETCH_ASSOC);
+            if(!$row)
+                return NULL;
+            
+            $model = new Model();
+            $model->setId($row[$this->colId_]);
+            $model->setName($row[$this->colName_]);
+            $model->setFile($row[$this->colLocation_]);
+            return $model;    
         }
 
         public static function getInstance()

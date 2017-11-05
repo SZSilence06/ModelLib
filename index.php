@@ -4,5 +4,6 @@
     
     require_once 'php/ModelLib.php';
 
-    ML_loadTheme();
+    $server = new Server();
+    $server->run();
 ?>

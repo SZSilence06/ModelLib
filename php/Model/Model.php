@@ -5,6 +5,7 @@
         private $tags_;    //array of string
         private $name_;         //string
         private $avatar_;       //string indicating address of the avatar
+        private $id_;
         
         public function getName() {
             return $this->name_;
@@ -32,6 +33,14 @@
             $bytes = filesize($this->file_);
             $factor = floor((strlen($bytes) - 1) / 3);
             return sprintf("%.{$decimals}f", $bytes / pow(1024, $factor)) . @$size[$factor];
+        }
+
+        public function setId($id) {
+            $this->id_ = $id;
+        } 
+
+        public function getId() {
+            return $this->id_;
         }
     }
 ?>

@@ -1,8 +1,9 @@
 body {
     font-family: "Hiragino Sans GB W3", "Hiragino Sans GB", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "SimHei", "ST Heiti", "WenQuanYi Zen Hei Sharp", "Sans";
+    background: #E9F0F5;
 }
 
-button {
+button, .button{
     display: inline-block;
     font-weight: 400;
     text-align: center;
@@ -14,6 +15,10 @@ button {
     line-height: 1.5;
     border-radius: .4rem;
     transition: 0.4s ease background-color;
+}
+
+ul, li {
+    list-style: none;
 }
 
 a, a:hover {
@@ -31,13 +36,13 @@ a:hover {
 }
 
 .header {
-    padding-top: 60px;
-    padding-left: 10px;
-    height: 96px;
+    margin-top: 60px;
+    margin-left: 10px;
 }
 
 .logo {
     float: left;
+    margin-left: 40px;
 }
 
 .search {
@@ -58,8 +63,9 @@ a:hover {
     background-color: #0c9e8f
 }
 
-.navigator ul {
-    list-style-type: none;
+.navigator {
+    margin-top: 30px;
+    margin-bottom: 150px;
 }
 
 .navigator li {
@@ -79,4 +85,97 @@ a:hover {
 
 .navigator a:hover {
     color: #e7b466;
+}
+
+#post_model_form .form_input {
+    display: block;
+    margin: 20px 40%;
+}
+
+.form_input .button {
+    display: block;
+    margin: auto;
+}
+
+#post_model_form .form_input .button {
+    background-color: #66ccff;
+    color: white;
+}
+
+#post_model_form .form_input .button:hover {
+    background-color: #4aa1c9;
+    color: white;
+}
+
+.form_input_text {
+    width: 400px;
+}
+
+.form_tag {
+    font-size: 14px;
+    color: grey;
+    margin: auto;
+}
+
+.model_list {
+    margin : auto 14%;
+    width: 72%;
+}
+
+.model_cell {
+    position: relative;
+    float: left;
+    margin: 10px;
+    padding: 8px;
+    color: grey;
+    font-size: 16px;
+    width: 250px;
+    height: 200px;
+    background-color: #eefffb;
+    box-shadow: 3px 3px 3px;
+}
+
+.model_cell:hover {
+    box-shadow: 5px 5px 5px;
+}
+
+.model_cell_overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    background-color: white;
+}
+
+.model_cell_overlay:hover {
+    opacity: 0.4;
+}
+
+.model_avatar {
+    width: 100%;
+    height: 130px;
+}
+
+.model_brief_info {
+
+}
+
+.model_list p{
+    margin: 0.2em auto;
+}
+
+.btn_download {
+    background-image: url(../img/download.svg);
+    position: absolute;
+    right: 6px;
+    bottom: 12px;
+    width: 24px;
+    height: 24px;
+    transition: 0.4s ease background-image;
+}
+
+.btn_download:hover {
+    /*background-image: url(../img/download_purple.svg);*/
 }

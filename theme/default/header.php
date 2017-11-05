@@ -25,9 +25,9 @@
 
          <div class="navigator">
             <ul>
-                <li><a href="list_models.php">View Models</a></li>
-                <li><a href="post_models.php">Upload Model</a></li>
-                <li><a href="#">ToDo</a></li>
+                <li><a href="/">Home</a></li>
+                <li><a href="list_models">View Models</a></li>
+                <li><a href="post_models">Upload Model</a></li> 
                 <li><a href="#">ToDo</a></li>
             </ul>
         </div>
