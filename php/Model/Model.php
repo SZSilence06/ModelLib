@@ -6,6 +6,8 @@
         private $name_;         //string
         private $avatar_;       //string indicating address of the avatar
         private $id_;
+        private $originalSource_;  //string indicatiing the original source of the model
+        private $description_;
         
         public function getName() {
             return $this->name_;
@@ -21,6 +23,10 @@
 
         public function setFile($file) {
             $this->file_ = $file;
+        }
+
+        public function setAvatar($avatar) {
+            $this->avatar_ = $avatar;
         }
 
         public function getAvatar() {
@@ -41,6 +47,22 @@
 
         public function getId() {
             return $this->id_;
+        }
+
+        public function setDescription($description) {
+            $this->description_ = $description;
+        }
+
+        public function getDescription() {
+            return $this->description_;
+        }
+
+        public function setOriginalSource($originalSource) {
+            $this->originalSource_ = $originalSource;
+        }
+
+        public function getOriginalSource() {
+            return $this->originalSource_;
         }
     }
 ?>

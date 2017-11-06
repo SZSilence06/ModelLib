@@ -1,7 +1,5 @@
 <?php
-    static $a = 0;
-    $a++;
-    echo $a;
+    phpinfo();
 ?>
 
 <button style="font-size: 14px;
